@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #ad54f5;
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: blue;
+    justify-content: space-around;
+    padding: 25px 0;
+    color: aliceblue;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    top: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.logo-semua-bisa {
+    position: absolute;
+    font-family: 'Poppins';
+    left: 287px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    left: -6px;
+    top: -4px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: black;
+    width: 28px;
+    height: 3px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: cyan;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: cyan;
+    transform: rotate(-45deg) translate(3px, -10px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+/* Responsive Breakpoint */
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: blue;
+        z-index: -1;
+        transform: translate(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Akhir Navbar */
+
+
+/* Bagian Home */
+.konten {
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.kata1 {
+    position: absolute;
+    width: 256px;
+    height: 36px;
+    left: 150px;
+    top: 150px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.kata2 {
+    position: absolute;
+    width: 593px;
+    height: 150px;
+    left: 150px;
+    top: 209px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+}
+
+.kata3 {
+    position: absolute;
+    width: 343px;
+    height: 60px;
+    left: 150px;
+    top: 382px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #000000;
+
+}
+
+.Daftar {
+    position: absolute;
+    width: 82px;
+    height: 38px;
+    left: 208px;
+    top: 480px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 0px;
+    color: aliceblue;
+
+    background: #0400D6;
+    border-radius: 15px;
+}
+
+.Login {
+    position: absolute;
+    width: 70px;
+    height: 38px;
+    left: 400px;
+    top: 480px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    color: #0400D6;
+
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background: #D9D9D900;
+}
+
+.gambar-icon {
+    position: absolute;
+    width: 534px;
+    height: 503px;
+    left: 750px;
+    top: 150px;
+}
+/* Akhir Home */
+
+
+
+/* Bagian Produk */
+.flex {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 5px grey;
+}
+
+.img-card {
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+}
+
+.img-harga {
+    color: rgb(117, 217, 17);
+}
+
+.img-toko {
+    color: rgb(59, 57, 57);
+}
+
+.btn-block {
+    width: 100%;
+    background: darkblue;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.btn-block:hover {
+    background-color: white;
+    border-style: solid;
+    color: darkblue;
+    transition: 0.4s;
+}
+
+.btn-order {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-order:hover {
+    color: darkblue;
+}
+/* Akhir Produk */
+
+
+
+/* Bagian Kasir */
+#cart-container  {
+    overflow-x: auto;
+}
+
+#card-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#card-container table thead {
+    font-weight: 700;
+}
+
+#card-container table thead td {
+    background: #fd8c66;
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+
+#card-container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+#card-container table td:nth-child(1) {
+    width: 100px;
+}
+
+#card-container table td:nth-child(2),
+#card-container table td:nth-child(3) {
+    width: 200px;
+}
+
+#card-container table td:nth-child(4),
+#card-container table td:nth-child(5),
+#card-container table td:nth-child(6) {
+    width: 170px;
+}
+
+#cart-container table tbody img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#cart-container table tbody i {
+    color: #8d8c89;
+}
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div {
+    border: 1px solid #b6b3b3;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5 {
+    background: #fd8c66;
+    color: #fff;
+    border: none;
+    padding: 6px 12px; 
+    font-weight: 700;
+}
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input {
+    padding: 0 12px;
+}
+
+#cart-bottom .coupon input {
+    height: 44px;
+}
+
+#cart-bottom .coupon input,
+#cart-bottom .coupon button {
+    margin: 0 0 20px 12px;
+}
+
+#cart-bottom .total div>div {
+    padding: 0 12px;
+}
+
+#cart-bottom .total h6 {
+    color: #2a2a2a;
+}
+
+.second-hr {
+    background: #b8b7b3;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total div>button {
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+/* Akhir kasir */
+
+
+
+/* Bagian Contact */
+.contact {
+    position: absolute;
+    width: 850px;
+    height: 250px;
+    left: 200px;
+    top: 180px;
+    padding-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #00AFE7;
+    border-radius: 5px;
+}
+/* Akhir Contact */
+
+
+
+
+/* Bagian Footer */
+.footer-contact {
+    width: 100%;
+    height: 50px;
+    padding-top: 500px;
+}
+.footer-bottom {
+    padding-top: 30px;
+    background: rgb(0, 0, 255);
+    height: 50px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: white;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    color: fff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+/* Akhir Footer */
