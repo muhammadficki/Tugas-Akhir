@@ -152,7 +152,7 @@ nav ul li a:hover {
 
 .kata1 {
     position: absolute;
-    width: 256px;
+    width: 260px;
     height: 36px;
     left: 150px;
     top: 150px;
@@ -162,16 +162,16 @@ nav ul li a:hover {
     font-weight: 600;
     font-size: 18px;
     line-height: 36px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .kata2 {
     position: absolute;
-    width: 593px;
+    width: 900px;
     height: 150px;
     left: 150px;
     top: 209px;
-
+S
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
@@ -416,7 +416,7 @@ nav ul li a:hover {
 
 
 /* Bagian Contact */
-.contact {
+/* .contact {
     position: absolute;
     width: 850px;
     height: 250px;
@@ -429,7 +429,7 @@ nav ul li a:hover {
 
     background: #00AFE7;
     border-radius: 5px;
-}
+} */
 /* Akhir Contact */
 
 
@@ -452,6 +452,7 @@ nav ul li a:hover {
     font-size: 14px;
     color: white;
     word-spacing: 2px;
+    list-style: none;
     text-transform: capitalize;
 }
 
